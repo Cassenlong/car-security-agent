@@ -1,0 +1,240 @@
+[
+  {
+    "id": "T001",
+    "name": "HTTP 明文传输线索",
+    "severity": "High",
+    "detector": "network",
+    "references": [
+      "PIPL-51"
+    ],
+    "suggestion": "核验真实传输链路并使用 TLS，检查证书及协议配置。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P001",
+    "name": "明文手机号暴露",
+    "severity": "High",
+    "detector": "privacy",
+    "references": [
+      "PIPL-51"
+    ],
+    "suggestion": "对日志和导出文件中的手机号脱敏，核查访问权限。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P002",
+    "name": "明文 VIN 暴露",
+    "severity": "Medium",
+    "detector": "privacy",
+    "references": [
+      "AUTO-3",
+      "PIPL-51"
+    ],
+    "suggestion": "核查 VIN 与个人关联的可能性，减少日志记录并去标识化。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P003",
+    "name": "明文邮箱暴露",
+    "severity": "Medium",
+    "detector": "privacy",
+    "references": [
+      "PIPL-51"
+    ],
+    "suggestion": "按用途最小化记录邮箱，并实施脱敏及访问控制。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P004",
+    "name": "明文身份证号疑似暴露",
+    "severity": "High",
+    "detector": "privacy",
+    "references": [
+      "PIPL-51"
+    ],
+    "suggestion": "核实匹配值并停止非必要明文记录。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P005",
+    "name": "位置数据保护",
+    "severity": "High",
+    "detector": "privacy",
+    "references": [
+      "AUTO-3",
+      "PIPL-28",
+      "PIPL-51"
+    ],
+    "suggestion": "确认位置数据必要性、存储加密、密钥管理和访问控制。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P006",
+    "name": "敏感信息单独同意核验",
+    "severity": "High",
+    "detector": "manual",
+    "references": [
+      "AUTO-9"
+    ],
+    "suggestion": "提供适用法律基础、单独同意记录、必要性告知及撤回流程证据。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P007",
+    "name": "个人信息告知核验",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "AUTO-7"
+    ],
+    "suggestion": "提供隐私告知文本、显示方式和测试记录。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P008",
+    "name": "数据保存期限核验",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "AUTO-7"
+    ],
+    "suggestion": "提供保存期限、目的必要性和到期删除记录；无统一工程天数阈值。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P009",
+    "name": "收集最小化核验",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "AUTO-6"
+    ],
+    "suggestion": "核实默认收集设置与功能必要性，此条为倡导性原则。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "P010",
+    "name": "删除权实现核验",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "AUTO-9"
+    ],
+    "suggestion": "结合适用场景核查删除请求、处理时限及记录。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "D001",
+    "name": "数据分类分级",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "DSL-21",
+      "AUTO-3"
+    ],
+    "suggestion": "结合用途、规模和影响补充分类分级结果。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "D002",
+    "name": "重要数据识别",
+    "severity": "High",
+    "detector": "manual",
+    "references": [
+      "AUTO-3"
+    ],
+    "suggestion": "核对数据范围、规模和相关目录，不从单个 GPS 字段直接认定重要数据。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "D003",
+    "name": "出境路径核验",
+    "severity": "High",
+    "detector": "manual",
+    "references": [
+      "AUTO-11"
+    ],
+    "suggestion": "核实真实目的地、数据属性及适用出境规则，域名不能单独证明出境。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "D004",
+    "name": "访问权限核验",
+    "severity": "High",
+    "detector": "manual",
+    "references": [
+      "PIPL-51"
+    ],
+    "suggestion": "提供权限矩阵和访问控制测试证据。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "D005",
+    "name": "重要数据风险评估",
+    "severity": "High",
+    "detector": "manual",
+    "references": [
+      "AUTO-10"
+    ],
+    "suggestion": "确认是否处理重要数据并核查评估和报送资料。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  },
+  {
+    "id": "C001",
+    "name": "CAN 高频异常线索",
+    "severity": "High",
+    "detector": "can",
+    "references": [],
+    "suggestion": "复核时间单位及正常基线，调查高频原因；不得仅凭高频认定攻击类型。",
+    "version": "1.0.0",
+    "basis": "工程启发式检测，无直接法律合格阈值"
+  },
+  {
+    "id": "C002",
+    "name": "CAN 未知标识符",
+    "severity": "Medium",
+    "detector": "can",
+    "references": [],
+    "suggestion": "核查 DBC 和基线覆盖范围，判断新 CAN ID 是否属于合法功能。",
+    "version": "1.0.0",
+    "basis": "工程启发式检测，无直接法律合格阈值"
+  },
+  {
+    "id": "C003",
+    "name": "CAN 数据质量",
+    "severity": "Medium",
+    "detector": "can",
+    "references": [],
+    "suggestion": "检查时间戳顺序、DLC 和数据字节，异常格式应先修复再分析。",
+    "version": "1.0.0",
+    "basis": "工程启发式检测，无直接法律合格阈值"
+  },
+  {
+    "id": "M001",
+    "name": "安全事件响应机制",
+    "severity": "Medium",
+    "detector": "manual",
+    "references": [
+      "DSL-29"
+    ],
+    "suggestion": "提供风险监测、响应预案与演练记录。",
+    "version": "1.0.0",
+    "basis": "法规关联的工程/人工核验项"
+  }
+]

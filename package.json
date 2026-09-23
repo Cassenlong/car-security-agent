@@ -1,0 +1,18 @@
+{
+  "name": "car-security-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local automotive data security assessment workflow agent",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node tests/run.mjs",
+    "demo": "node cli.mjs --demo",
+    "assess": "node cli.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "test:http": "node tests/http.mjs"
+  }
+}

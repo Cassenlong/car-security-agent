@@ -1,0 +1,7 @@
+{
+  "vin": "L1234567890123456",
+  "gps": "31.2304,121.4737",
+  "phone": "13800138000",
+  "upload_url": "http://example.com/upload",
+  "encrypted": false
+}

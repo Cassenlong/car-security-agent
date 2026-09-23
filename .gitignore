@@ -1,0 +1,4 @@
+data/
+reports/
+.env
+node_modules/
